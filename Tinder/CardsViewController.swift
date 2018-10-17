@@ -15,9 +15,12 @@ class CardsViewController: UIViewController {
     @IBOutlet weak var navBarImage: UIImageView!
     @IBOutlet weak var cardPicture: UIImageView!
     
-    // element for faces
-    //var newlyCardPicture: UIImageView!
+    // element for card
     var cardInitialCenter: CGPoint!
+    
+    // inital points when swap cardPicture
+    var startPointY: CGFloat!
+    var startMidFrameHeight: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +34,24 @@ class CardsViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         if sender.state == .began {
-            //newlyCardPicture = sender.view as? UIImageView
-            //cardInitialCenter = newlyCardPicture.center
             cardInitialCenter = cardPicture.center
-            
+            startPointY = sender.location(in: cardPicture).y
+            startMidFrameHeight = cardPicture.frame.height/2
         } else if sender.state == .changed {
-            cardPicture.transform = view.transform.rotated(by:CGFloat(translation.x * CGFloat(Double.pi) / 180))
+            // check if startPoint on Upper frame or Lower frame
+            if startPointY < startMidFrameHeight {
+                // if startPoint on Upper frame rotate clockwise
+                cardPicture.transform = view.transform.rotated(by:CGFloat(translation.x/10 * CGFloat(Double.pi) / 180))
+                cardPicture.center = CGPoint(x: cardInitialCenter.x + (translation.x), y: cardInitialCenter.y)
+            } else if startPointY > startMidFrameHeight {
+                // if startPoint on lower frame rotate counterclockwise
+                cardPicture.transform = view.transform.rotated(by:CGFloat(-translation.x/10 * CGFloat(Double.pi) / 180))
+                cardPicture.center = CGPoint(x: cardInitialCenter.x + (translation.x), y: cardInitialCenter.y)
+            }
             
-            cardPicture.center = CGPoint(x: cardInitialCenter.x + (translation.x), y: cardInitialCenter.y)
         } else if sender.state == .ended {
             cardPicture.center = cardInitialCenter
-            //cardPicture.transform.rotated(by: cardinitalRotation)
+            cardPicture.transform = CGAffineTransform.identity
         }
     }
     
