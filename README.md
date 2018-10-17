@@ -1,6 +1,6 @@
-# Lab 8 - *Name of App Here*
+# Lab 8 - *Tinder*
 
-**Name of your app** is a mock Tindr app featuring gestures and custom transitions
+**Tinder** is a mock Tindr app featuring gestures and custom transitions
 
 Time spent: **X** hours spent in total
 
@@ -36,7 +36,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Jangey]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
