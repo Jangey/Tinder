@@ -50,8 +50,14 @@ class CardsViewController: UIViewController {
             }
             
         } else if sender.state == .ended {
-            cardPicture.center = cardInitialCenter
-            cardPicture.transform = CGAffineTransform.identity
+            if translation.x > 50 || translation.x < -50 {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.cardPicture.removeFromSuperview()
+                })
+            } else {
+                cardPicture.center = cardInitialCenter
+                cardPicture.transform = CGAffineTransform.identity
+            }
         }
     }
     
