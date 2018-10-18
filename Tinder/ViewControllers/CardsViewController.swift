@@ -48,9 +48,8 @@ class CardsViewController: UIViewController {
                 cardPicture.transform = view.transform.rotated(by:CGFloat(-translation.x/10 * CGFloat(Double.pi) / 180))
                 cardPicture.center = CGPoint(x: cardInitialCenter.x + (translation.x), y: cardInitialCenter.y)
             }
-            
         } else if sender.state == .ended {
-            if translation.x > 50 || translation.x < -50 {
+            if abs(translation.x) > 50 {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.cardPicture.removeFromSuperview()
                 })
@@ -59,6 +58,10 @@ class CardsViewController: UIViewController {
                 cardPicture.transform = CGAffineTransform.identity
             }
         }
+    }
+    
+    @IBAction func didTapCard(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "ShowProfile", sender: self)
     }
     
     /*
