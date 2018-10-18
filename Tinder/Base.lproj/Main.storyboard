@@ -81,10 +81,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="oX0-UF-A5A">
-                                <rect key="frame" x="30" y="229" width="354" height="380"/>
+                                <rect key="frame" x="10" y="209" width="394" height="420"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="jRZ-pF-TAQ"/>
+                                    <constraint firstAttribute="height" constant="420" id="jRZ-pF-TAQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQh-jo-Hpa">
@@ -103,12 +103,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2or-f5-2Kj" firstAttribute="top" secondItem="jUN-SM-prm" secondAttribute="top" id="8ex-Xd-HG4"/>
-                            <constraint firstItem="jUN-SM-prm" firstAttribute="trailing" secondItem="oX0-UF-A5A" secondAttribute="trailing" constant="30" id="B3t-47-Ffg"/>
+                            <constraint firstItem="jUN-SM-prm" firstAttribute="trailing" secondItem="oX0-UF-A5A" secondAttribute="trailing" constant="10" id="B3t-47-Ffg"/>
                             <constraint firstItem="jUN-SM-prm" firstAttribute="trailing" secondItem="2or-f5-2Kj" secondAttribute="trailing" id="BgM-Xp-9aP"/>
-                            <constraint firstItem="oX0-UF-A5A" firstAttribute="leading" secondItem="jUN-SM-prm" secondAttribute="leading" constant="30" id="gOl-nh-4B6"/>
+                            <constraint firstItem="oX0-UF-A5A" firstAttribute="leading" secondItem="jUN-SM-prm" secondAttribute="leading" constant="10" id="gOl-nh-4B6"/>
                             <constraint firstItem="QQh-jo-Hpa" firstAttribute="top" secondItem="jUN-SM-prm" secondAttribute="top" constant="30" id="iWK-2Y-oNl"/>
                             <constraint firstItem="QQh-jo-Hpa" firstAttribute="leading" secondItem="jUN-SM-prm" secondAttribute="leading" constant="50" id="jei-hr-Eox"/>
-                            <constraint firstItem="oX0-UF-A5A" firstAttribute="top" secondItem="2or-f5-2Kj" secondAttribute="bottom" constant="120" id="s50-zY-ekP"/>
+                            <constraint firstItem="oX0-UF-A5A" firstAttribute="top" secondItem="2or-f5-2Kj" secondAttribute="bottom" constant="100" id="s50-zY-ekP"/>
                             <constraint firstItem="2or-f5-2Kj" firstAttribute="leading" secondItem="jUN-SM-prm" secondAttribute="leading" id="yIu-Em-Dgv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jUN-SM-prm"/>
